@@ -1,0 +1,109 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.card-wrapper {
+  position: relative;
+  width: 300px;
+  height: 400px;
+  perspective: 1000px;
+}
+
+.card {
+  position: relative;
+  width: auto;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom right, #fff, #f9f9f9);
+  transform-style: preserve-3d;
+  transition: transform 0.1s;
+  margin-top: 20px;
+}
+
+.github-button {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 40px;
+  height: 40px;
+  background: #f0f0f0;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transform: translateZ(50px);
+  font-size: 20px;
+  color: #333;
+  cursor: pointer;
+  border: none;
+  outline: none;
+  z-index: 5;
+}
+
+.github-button:focus {
+  outline: none;
+}
+
+.github-button i {
+  pointer-events: none;
+}
+
+.card-content {
+  padding: 10px;
+  text-align: center;
+  transform: translateZ(50px);
+  margin-top: -20px;
+}
+
+.main-image {
+  position: absolute;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  height: calc(50% - 40px);
+  border-radius: 0 0 15px 15px;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transform: translateZ(20px);
+}
+
+.side-image {
+  position: absolute;
+  top: 50%;
+  width: 100px;
+  height: 210px;
+  border-radius: 10px;
+  background-color: #44bba4;
+  background-size: cover;
+  background-position: center;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  opacity: 0;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+  transform-style: preserve-3d;
+  transform: translateY(-50%);
+}
+
+.side-image-left {
+  left: -30px;
+  transform: rotateY(-45deg) translateZ(50px) translateX(-120px);
+}
+
+.side-image-right {
+  right: -30px;
+  transform: rotateY(45deg) translateZ(50px) translateX(120px);
+}
+
+.card-wrapper:hover .side-image-left {
+  opacity: 1;
+  transform: rotateY(-45deg) translateZ(50px) translateX(-60px);
+}
+
+.card-wrapper:hover .side-image-right {
+  opacity: 1;
+  transform: rotateY(45deg) translateZ(50px) translateX(60px);
+}

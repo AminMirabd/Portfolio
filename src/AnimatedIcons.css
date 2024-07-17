@@ -1,0 +1,40 @@
+/* src/AnimatedIcons.css */
+.icon-container {
+    display: flex;
+    overflow: hidden; /* Hide overflowing icons */
+    width: 100%; /* Adjust based on your requirements */
+    position: relative; /* Position relative for absolute positioning of icons */
+    height: 50px; /* Adjust based on your icon size */
+  }
+  
+  .icon {
+    position: absolute;
+    top: 0;
+    animation: moveIcons 10s linear infinite; /* Animation applied to icons */
+    font-size: 2rem; /* Adjust based on your icon size */
+  }
+  
+  /* Keyframes for the animation */
+  @keyframes moveIcons {
+    0% {
+      transform: translateX(100%); /* Start from the right */
+    }
+    100% {
+      transform: translateX(-100%); /* Move to the left */
+    }
+  }
+  
+  /* Position each icon at different starting points */
+  .icon:nth-child(1) {
+    animation-delay: 0s;
+  }
+  .icon:nth-child(2) {
+    animation-delay: 2.5s;
+  }
+  .icon:nth-child(3) {
+    animation-delay: 5s;
+  }
+  .icon:nth-child(4) {
+    animation-delay: 7.5s;
+  }
+  

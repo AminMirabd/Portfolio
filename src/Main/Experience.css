@@ -1,0 +1,176 @@
+/* Experience.css */
+.element.experience {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px;
+  background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+  border-radius: 10px;
+  position: relative;
+  overflow: hidden;
+  width: 85%;
+}
+
+.element.experience h2 {
+  font-size: 2.4em;
+  color: #2C3A47;
+  margin-bottom: 40px;
+  text-align: center;
+  position: relative;
+  z-index: 10;
+}
+
+.timeline {
+  position: relative;
+  width: 80%;
+}
+
+.line {
+  border-radius: 20px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 8px;
+  height: 0;
+  background: #2C3A47;
+  transform: translateX(-50%);
+  transition: height 4s ease-in-out;
+}
+
+.line.animate {
+  height: 100%;
+}
+
+.experience-item {
+  position: relative;
+  width: 45%;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  background: #FFFFFF;
+  border-radius: 10px;
+  margin-bottom: 30px;
+  opacity: 0;
+  transform: translateY(50px);
+  transition: transform 1s ease, opacity 1s ease;
+}
+
+.experience-item.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.experience-item.left {
+  right: 8%;
+}
+
+.experience-item.right {
+  left: 60%;
+}
+
+.experience-item .content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.experience-item .icn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.experience-icon {
+  width: 50px; /* Adjust the size as needed */
+  height: auto;
+}
+
+.experience-item h3 {
+  font-size: 1.8em;
+  color: #2C3A47;
+  margin-bottom: 10px;
+}
+
+.experience-item h4 {
+  font-size: 1.2em;
+  color: #6e93e3;
+  margin-bottom: 10px;
+}
+
+.experience-item .duration,
+.experience-item .description {
+  font-size: 1em;
+  color: #4B4B4B;
+  margin-bottom: 10px;
+}
+
+.front-image {
+  position: fixed;
+  top: 5vh; 
+  right: -8.7vw; 
+  width: 10vw;
+  height: 10vw; 
+  z-index: 5; 
+  border-width: 4px;
+  border-color: black;
+}
+
+.back-image {
+  position: fixed;
+  top: 5vh; 
+  left: -8.7vw; 
+  width: 10vw;
+  height: 10vw; 
+  z-index: 5; 
+  border-width: 4px;
+  border-color: black;
+}
+
+.opposite-image {
+  position: absolute;
+  width: 150px;
+  z-index: 0; 
+  border-radius: 15px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Add shadow for 3D effect */
+  transform: rotateY(10deg) scale(0.95); /* Slight rotation and scale for 3D effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for hover effect */
+}
+
+.opposite-image:hover {
+  transform: rotateY(0deg) scale(1); /* Straighten and scale up on hover */
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); /* Increase shadow on hover */
+}
+
+
+.opposite-image.large-image {
+  width: 20vw; /* Make this image larger */
+}
+
+
+@media (max-width: 768px) {
+  .timeline {
+    width: 100%;
+  }
+
+  .line {
+    left: 20px;
+  }
+
+  .experience-item {
+    width: calc(100% - 40px);
+    left: 40px;
+  }
+
+  .experience-item.left,
+  .experience-item.right {
+    left: 20px;
+  }
+
+  .front-image,
+  .back-image,
+  .opposite-image {
+    width: 20vw;
+    height: auto;
+  }
+}
