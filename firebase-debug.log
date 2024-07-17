@@ -1,0 +1,49 @@
+[debug] [2024-07-17T21:59:40.079Z] ----------------------------------------------------------------------
+[debug] [2024-07-17T21:59:40.082Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carol\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-17T21:59:40.082Z] CLI Version:   13.13.3
+[debug] [2024-07-17T21:59:40.083Z] Platform:      win32
+[debug] [2024-07-17T21:59:40.083Z] Node Version:  v18.15.0
+[debug] [2024-07-17T21:59:40.084Z] Time:          Wed Jul 17 2024 17:59:40 GMT-0400 (GMT-04:00)
+[debug] [2024-07-17T21:59:40.084Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-17T21:59:40.094Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-17T21:59:40.094Z] > authorizing via signed-in user (amin.mirabd@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Carol\OneDrive\Área de Trabalho\portfolio
+
+[debug] [2024-07-17T22:04:47.320Z] ----------------------------------------------------------------------
+[debug] [2024-07-17T22:04:47.323Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\Carol\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2024-07-17T22:04:47.323Z] CLI Version:   13.13.3
+[debug] [2024-07-17T22:04:47.323Z] Platform:      win32
+[debug] [2024-07-17T22:04:47.324Z] Node Version:  v18.15.0
+[debug] [2024-07-17T22:04:47.325Z] Time:          Wed Jul 17 2024 18:04:47 GMT-0400 (GMT-04:00)
+[debug] [2024-07-17T22:04:47.325Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2024-07-17T22:04:47.334Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2024-07-17T22:04:47.335Z] > authorizing via signed-in user (amin.mirabd@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  C:\Users\Carol\OneDrive\Área de Trabalho\portfolio
+
+[info] 
+=== Project Setup
+[info] 
+[info] First, let's associate this project directory with a Firebase project.
+[info] You can create multiple project aliases by running firebase use --add, 
+[info] but for now we'll just set up a default project.
+[info] 

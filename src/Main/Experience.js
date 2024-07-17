@@ -36,7 +36,7 @@ const Experience = () => {
         { src: wcdsb1, position: { top: '15vh', left: '-40vw' }, className: 'opposite-image'}
       ]
     },
-    // Add more experiences as needed
+
   ];
 
   useEffect(() => {
@@ -50,13 +50,13 @@ const Experience = () => {
         setTimeout(() => {
           item.classList.add('visible');
         }, delay);
-        delay += 1000; // Delay between each item appearance
+        delay += 1000; 
       });
     };
 
     const animateLine = () => {
       line.classList.add('animate');
-      setTimeout(revealItems, 2000); // Start revealing items after the line animation
+      setTimeout(revealItems, 2000); 
     };
 
     window.addEventListener('load', animateLine);
