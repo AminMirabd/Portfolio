@@ -4,7 +4,7 @@ import './Footer.css';
 function Footer() {
   return (
     <footer>
-      <p>Copyright &copy; 2023. All rights reserved.</p>
+      <p>Copyright &copy; 2024. All rights reserved to Amin Mir.</p>
     </footer>
   );
 }

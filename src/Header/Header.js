@@ -6,12 +6,18 @@ function Header() {
   const [lastScrollTop, setLastScrollTop] = useState(0);
   const [isTop, setIsTop] = useState(true);
   const [isAutoScroll, setIsAutoScroll] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
   const handleClick = () => {
     setIsAutoScroll(true);
     setTimeout(() => {
       setIsAutoScroll(false);
     }, 1000);
+    setMenuOpen(false); // Close menu on link click
+  }
+
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   }
 
   useEffect(() => {
@@ -47,7 +53,10 @@ function Header() {
 
   return (
     <header>
-      <nav>
+      <div className="menu-toggle" onClick={toggleMenu}>
+        ☰
+      </div>
+      <nav className={menuOpen ? 'open' : ''}>
         <Link onClick={handleClick} activeClass="active" to="landing" spy={true} smooth={true} offset={-70}>About</Link>
         <Link onClick={handleClick} activeClass="active" to="about" spy={true} smooth={true} offset={-70}>Projects</Link>
         <Link onClick={handleClick} activeClass="active" to="experience" spy={true} smooth={true} offset={-70}>Experience</Link>

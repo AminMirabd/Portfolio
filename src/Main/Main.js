@@ -77,7 +77,7 @@ function Main() {
         </div>
       </Element>
       <Element name="about" className="element about">
-      <h2 className='hh2'>Projects</h2>
+      <h2 className='h2'>Projects</h2>
       <Card
         title="Linque"
         description="Linque is crafted for the Waterloo Catholic District School Board staff, 

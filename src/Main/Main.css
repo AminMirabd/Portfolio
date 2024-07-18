@@ -74,14 +74,14 @@ main {
   background-position: center;
   margin-top: 100px;
   margin-right: 120px;
-  padding-left: 0; /* Ensure no padding on the left side */
-  padding-right: 20px; /* Adjust padding to avoid horizontal scroll */
+  padding-left: 0;
+  padding-right: 20px; 
   border-radius: 0 10px 10px 0;
   display: flex;
   align-items: center;
   justify-content: space-between;
   animation: slideInIntro 2.5s forwards;
-  width: calc(100% + 20px); /* Ensure full width without gaps */
+  width: calc(100% + 20px);
 
 }
 
@@ -98,7 +98,7 @@ main {
 
 .proj .content {
   margin-right: 0px;
-  width: 60%;
+  width: 600%;
 }
 
 .intro .side-video {
@@ -221,44 +221,11 @@ form button:hover {
 }
 
 
-@media (max-width: 768px) {
-  main {
-    padding: 10px;
-  }
 
-  .element.intro, .element.projs, .about {
-    flex-direction: column;
-    width: 100%;
-    margin: 10px 0;
-    padding: 10px;
-  }
-
-  .intro .content, .proj .content, .about .content {
-    width: 100%;
-    margin-right: 0;
-  }
-
-  .intro .side-image, .proj .side-image, .about .side-image {
-    width: 40%;
-    margin: 20px 0;
-  }
-
-  .element.contact {
-    margin-left: 20px;
-  }
-
-  form input, form textarea {
-    width: 80%;
-  }
-
-  form button {
-    width: 50%;
-  }
-}
 
 @media (max-width: 480px) {
   h2 {
-    font-size: 1.3em;
+    font-size: 1.5em;
   }
 
   p {
@@ -284,14 +251,14 @@ form button:hover {
 
 
 
-.hh2 {
+/* .hh2 {
   position: absolute;
   top: 0;
   left: 50%;
   transform: translateX(-50%);
   margin-top: 30px;
   text-align: center;
-}
+} */
 
 
 
@@ -331,25 +298,99 @@ form button:hover {
 }
 
 @media (max-width: 768px) {
-  .icons > * {
-    font-size: 2em;
+  main {
+    padding: 10px;
   }
-}
 
-@media (max-width: 480px) {
-  .icons > * {
-    font-size: 1.5em;
+  .element.intro, .element.projs, .about {
+    flex-direction: column;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    margin-top: 60px;
   }
-}
+  
+  .about{
+    height: 290vw;
 
-@media (max-width: 768px) {
-  .icons i {
-    font-size: 2em;
+
+    background-color: #D3D0CB;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-left: 30px;
+  
+    width: 100%;  
+    padding-left: 10px; 
+    padding-right: 0px; 
+    border-radius: 10px 0 0 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    animation: slideInProj 2.5s forwards;
+    overflow: hidden; 
+    box-sizing: border-box; 
   }
-}
 
-@media (max-width: 480px) {
-  .icons i {
-    font-size: 1.5em;
+  .intro .content, .proj .content, .about .content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-right: 0;
+    align-items: stretch;
+    box-sizing: border-box;
+  }
+
+  .intro .side-image, .proj .side-image, .about .side-image {
+    width: 40%;
+    margin: 20px 0;
+  }
+
+  .element.contact {
+    margin-left: 20px;
+  }
+
+  form input, form textarea {
+    width: 80%;
+  }
+
+  form button {
+    width: 50%;
+  }
+  /* .hh2{
+    text-align: center;
+    margin-bottom: 400px;
+  } */
+  .element.intro {
+  
+    background-color: #E7BB41;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    margin-top: 90px;
+    margin-right: 70px;
+    padding-left: 0;
+    padding-right: 20px; 
+    border-radius: 0 10px 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    animation: slideInIntro 2.5s forwards;
+    width: calc(100% + 20px);
+  
+  }
+  .intro .side-video {
+    margin-top: 10px;
+    margin-left: 80px;
+    border-width: 0px;
+    width: 50%;
+    height: auto;
+    border-radius: 15px;
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: transform 0.3s ease-in-out;
+  }
+  .intro .content{
+    padding: 20px;
+    margin-left: 80px;
   }
 }
