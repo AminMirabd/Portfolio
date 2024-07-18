@@ -159,7 +159,7 @@ function Main() {
           <input
             type="hidden"
             name="to_name"
-            value="Recipient Name" // You can replace "Recipient Name" with your actual name or any placeholder
+            value="Recipient Name" 
           />
           <button class="btn" type="submit">Send</button>
         </form>

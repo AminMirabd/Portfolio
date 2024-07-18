@@ -80,6 +80,7 @@
   font-size: 1.8em;
   color: #2C3A47;
   margin-bottom: 10px;
+  text-align: center;
 }
 
 .experience-item h4 {
@@ -144,12 +145,14 @@
   }
 
   .line {
-    left: 20px;
+    left: 0px;
   }
 
   .experience-item {
-    width: calc(100% - 40px);
-    left: 40px;
+    width: calc(100% - 80px);
+    left: 20px;
+    font-size: 0.6em;
+    padding-right: 50px;
   }
 
   .experience-item.left,
@@ -157,10 +160,33 @@
     left: 20px;
   }
 
-  .front-image,
-  .back-image,
-  .opposite-image {
+  .opposite-image, .opposite-image.large-image {
+    position: static;
+    width: 150px;
+    height: auto;
+    z-index: 0; 
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
+    transform: rotateY(10deg) scale(0.95); 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  }
+  .front-image{
     width: 20vw;
     height: auto;
+    left: -35px;
+  }
+  
+  .back-image{
+    width: 20vw;
+    height: auto;
+    left: -35px;
+  }
+
+  .experience-item .content .description {
+    margin: 0px -30px 0px 0px;
+  }
+  .experience-item h3, .experience-item .duration, .experience-item h4 {
+    margin-right: -30px;
+    text-align: center;
   }
 }
