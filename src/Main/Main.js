@@ -73,14 +73,14 @@ function Main() {
         </video>
         <div className="content">
           <h2><span className="name">Amin</span> <span className="surname">Mirabdolvahabi</span></h2>
-          <p>A tech and engineering lover interested in applied math, physics, and programming.</p>
+          <p>Conestoga College graduate, developer, and WCDSB employee and scholar. I am an engineering and programming enthusiast and enjoy learning new things. I strive to apply my knowledge to solve real-life problems!</p>
         </div>
       </Element>
       <Element name="about" className="element about">
-      <h2 className='h2'>Projects</h2>
+      <h2 id="h2" className='hh2'>Projects</h2>
       <Card
         title="Linque"
-        description="Linque is crafted for the Waterloo Catholic District School Board staff, 
+        description="Linque is developed for the Waterloo Catholic District School Board staff, 
         particularly International Ambassadors and Coordinators. Streamlining the management
          of events, facilitating communication, and documentation."
         leftImage={login}
