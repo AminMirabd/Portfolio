@@ -9,6 +9,9 @@ import './background.css';
 import Card from './Card';
 import cal from './cal.jpg'
 import login from './login.jpg';
+import mine1 from './mine1.png';
+import mine2 from './mine2.png';
+import mono from './mono.png';
 import Experience from './Experience';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPython, FaJava, FaLinux, FaGithub, FaGit} from 'react-icons/fa';
 import { SiMongodb, SiMysql, SiGooglecloud, SiApachecordova, SiAndroidstudio, SiCsharp, SiFirebase, SiMicrosoftazure, SiMicrosoftsqlserver, SiMonogame, SiJquery, SiExpress  } from 'react-icons/si';
@@ -60,14 +63,6 @@ function Main() {
 
     setForm({ from_name: '', email: '', message: '' }); 
   };
-
-  const projects = [
-    { title: "Project 1", description: "This is Project 1" },
-    { title: "Project 2", description: "This is Project 2" },
-    { title: "Project 3", description: "This is Project 3" },
-    { title: "Project 4", description: "This is Project 4" }
-  ];
-
   return (
     <main>
       <div className="background"><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/></div>
@@ -85,23 +80,23 @@ function Main() {
       <h2 className='hh2'>Projects</h2>
       <Card
         title="Linque"
-        description="An Employee Management App for Waterloo Catholic District School Board"
+        description="Linque is crafted for the Waterloo Catholic District School Board staff, 
+        particularly International Ambassadors and Coordinators. Streamlining the management
+         of events, facilitating communication, and documentation."
         leftImage={login}
         rightImage={cal}
         mainImage="https://media.licdn.com/dms/image/C561BAQFrNSIcnmB0yQ/company-background_10000/0/1584128359974/waterloo_catholic_district_school_board_cover?e=2147483647&v=beta&t=aPXT6U2C7kwt44I7kmVU4N-TglouVD19h1mpD-wsPJo"
         githubLink="https://github.com/AminMirabd/Linque"
       />
       <Card
-        title="3D Hover Card"
-        description="This is a modern 3D card. Hover to see the effect."
-        // leftImage="https://via.placeholder.com/100" // Replace with actual image URL
-        // rightImage="https://via.placeholder.com/100" // Replace with actual image URL
-      />
-            <Card
-        title="3D Hover Card"
-        description="This is a modern 3D card. Hover to see the effect."
-        // leftImage="https://via.placeholder.com/100" // Replace with actual image URL
-        // rightImage="https://via.placeholder.com/100" // Replace with actual image URL
+        title="Minesweeper"
+        description="Developed using MonoGame and C#.
+         The game features three difficulty levels: easy, medium, and hard.
+          It includes random mine placement, cell flagging, and click events for cells and music."
+        leftImage={mono}
+        rightImage={mine2}
+        mainImage={mine1}
+        githubLink="https://github.com/AminMirabd/Minesweeper-CSharp-MonoGame"
       />
       </Element>
 
@@ -134,59 +129,7 @@ function Main() {
           <SiExpress title="Express" />
         </div>
       </Element>
-
-      {/* <Element name="about" className="element about">
-        <h2>About</h2>
-        <div className="section">
-          <div className="text-section">
-            <h3>Interest</h3>
-            <p>A tech and engineering lover interested in applied math, physics, and programming.</p>
-          </div>
-          <div className="image-section">
-            <img src="interest.jpg" alt="Interest" />
-          </div>
-        </div>
-        <div className="section reverse">
-          <div className="text-section">
-            <h3>Programming Skills</h3>
-            <p>Experience: C#(Both WinForms and Console App), HTML CSS, JavaScript(express, mongoose, node),Database(MongoDB, Microsoft Access)</p>
-          </div>
-          <div className="image-section">
-            <img src="programming.jpg" alt="Programming" />
-          </div>
-        </div>
-        <div className="section">
-          <div className="text-section">
-            <h3>3D Modeling Experience</h3>
-            <p>Have experience with solid works and AutoCAD. Worked as an intern at Saderat Bank of Iran.</p>
-          </div>
-          <div className="image-section">
-            <img src="3dmodeling.jpg" alt="3D Modeling" />
-          </div>
-        </div>
-        <div className="section reverse">
-          <div className="text-section">
-            <h3>Languages</h3>
-            <p>Bilingual: Persian, English (also familiar with French(3 years) and Arabic(5 years))</p>
-          </div>
-          <div className="image-section">
-            <img src="languages.jpg" alt="Languages" />
-          </div>
-        </div>
-        <h3>Other achievements</h3>
-        <p>Winner of the International Student Academic scholarship from Waterloo Catholic District School Board. 
-        Member of St. Davids, high school's ambassador and the receiver of the honours degree of the international certificate program of WCDSB.
-        A player in D8 Volleyball League and Wrestling League. With over two years of experience in global citizenship and international activities in WCDSB.</p>
-      </Element>
-      <Element name="projects" className="element projs">
-        <h2>Projects</h2>
-        <div className="grid">
-          {projects.map((project, index) => (
-            <ProjectCard key={index} title={project.title} description={project.description} />
-          ))}
-        </div>
-      </Element> */}
-
+      
       <Element name="contact" className="element contact">
         <h2>Contact Me</h2>
         <form onSubmit={handleSubmit}>

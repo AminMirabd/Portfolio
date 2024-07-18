@@ -15,7 +15,7 @@ const Experience = () => {
       title: "Research Assistant",
       company: "University of Waterloo",
       duration: "Jul 2023 - Sep 2023",
-      description: "Developed and maintained web applications using React, Node.js, and MongoDB.",
+      description: "Collected data on 'CableBot,' an eco-friendly alternative to lift trucks in warehousing. Analyzed greenhouse gas emissions and environmental benefits of CableBot. Participated in assembling CableBot. Gained hands-on experience with simulation software 'Gazebo' and 'Isaac Nvidia' to replicate warehousing scenarios and demonstrate CableBot's capabilities. Explored CableBot's functionalities in depth using Gazebo.",
       frontImage: uw,
       backImage: uw,
       oppositeImages: [
@@ -25,10 +25,10 @@ const Experience = () => {
       ]
     },
     {
-      title: "Project Manager",
-      company: "Another Tech Company",
-      duration: "Mar 2018 - Dec 2019",
-      description: "Led a team of developers to successfully deliver multiple software projects.",
+      title: "International Ambassador",
+      company: "Waterloo Catholic District School Board",
+      duration: "Jul 2023 - Present",
+      description: "Oversaw international students transitioning to our high school program. Addressed student concerns and helped them acclimate to the Canadian environment. Designed and led cultural immersion programs. Organized and chaperoned excursions to Canadian landmarks. Collaborated with educators and administrators to support students. Communicated regularly with parents and guardians about their child's experiences and well-being.",
       frontImage: uw,
       backImage: wcdsb,
       oppositeImages: [
