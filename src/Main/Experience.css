@@ -98,22 +98,22 @@
 
 .front-image {
   position: fixed;
-  top: 5vh; 
-  right: -8.7vw; 
+  top: 5vh;
+  right: -8.7vw;
   width: 10vw;
-  height: 10vw; 
-  z-index: 5; 
+  height: 10vw;
+  z-index: 5;
   border-width: 4px;
   border-color: black;
 }
 
 .back-image {
   position: fixed;
-  top: 5vh; 
-  left: -8.7vw; 
+  top: 5vh;
+  left: -8.7vw;
   width: 10vw;
-  height: 10vw; 
-  z-index: 5; 
+  height: 10vw;
+  z-index: 5;
   border-width: 4px;
   border-color: black;
 }
@@ -121,23 +121,21 @@
 .opposite-image {
   position: absolute;
   width: 150px;
-  z-index: 0; 
+  z-index: 0;
   border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
-  transform: rotateY(10deg) scale(0.95); 
-  transition: transform 0.3s ease, box-shadow 0.3s ease; 
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+  transform: rotateY(10deg) scale(0.95);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .opposite-image:hover {
-  transform: rotateY(0deg) scale(1); 
-  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5); 
+  transform: rotateY(0deg) scale(1);
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
 }
-
 
 .opposite-image.large-image {
-  width: 20vw; 
+  width: 20vw;
 }
-
 
 @media (max-width: 768px) {
   .timeline {
@@ -164,20 +162,21 @@
     position: static;
     width: 150px;
     height: auto;
-    z-index: 0; 
+    z-index: 0;
     border-radius: 15px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); 
-    transform: rotateY(10deg) scale(0.95); 
-    transition: transform 0.3s ease, box-shadow 0.3s ease; 
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    transform: rotateY(10deg) scale(0.95);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
   }
-  .front-image{
+
+  .front-image {
     width: 20vw;
     height: auto;
     left: -35px;
     top: 80px;
   }
-  
-  .back-image{
+
+  .back-image {
     width: 20vw;
     height: auto;
     left: -35px;
@@ -187,7 +186,10 @@
   .experience-item .content .description {
     margin: 0px -30px 0px 0px;
   }
-  .experience-item h3, .experience-item .duration, .experience-item h4 {
+
+  .experience-item h3,
+  .experience-item .duration,
+  .experience-item h4 {
     margin-right: -30px;
     text-align: center;
   }

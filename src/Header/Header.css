@@ -36,7 +36,7 @@ nav {
 }
 
 nav a {
-  margin: 0 15px;
+  margin: 0 10px;
   text-decoration: none;
   color: #FFFFFF;
   font-size: 1em;
@@ -84,11 +84,11 @@ nav a, .Link {
     background: var(--primary-color);
     transition: max-height 0.3s ease-out;
     overflow: hidden;
-    max-height: 0; /* Collapse menu initially */
+    max-height: 0;
   }
 
   nav.open {
-    max-height: 341px; /* Expand menu when open */
+    max-height: 110vw; 
   }
 
   nav a {

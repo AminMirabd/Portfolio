@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { Element } from 'react-scroll';
-import './Experience.css'; 
+import './Experience.css';
 import uw from './uw.png';
 import uw1 from './ExperiencesAssests/uw1.png';
 import uw2 from './ExperiencesAssests/uw2.png';
@@ -19,7 +19,7 @@ const Experience = () => {
       frontImage: uw,
       backImage: uw,
       oppositeImages: [
-        { src: uw1, position: { top: '2vh', left: '63vw' },className: 'opposite-image' },
+        { src: uw1, position: { top: '2vh', left: '63vw' }, className: 'opposite-image' },
         { src: uw2, position: { top: '6vh', left: '42vw' }, className: 'opposite-image' },
         { src: uw3, position: { top: '10vh', left: '52.5vw' }, className: 'opposite-image' }
       ]
@@ -33,10 +33,9 @@ const Experience = () => {
       backImage: wcdsb,
       oppositeImages: [
         { src: wcdsb2, position: { top: '5vh', left: '-30vw' }, className: 'opposite-image large-image' },
-        { src: wcdsb1, position: { top: '15vh', left: '-40vw' }, className: 'opposite-image'}
+        { src: wcdsb1, position: { top: '15vh', left: '-40vw' }, className: 'opposite-image' }
       ]
     },
-
   ];
 
   useEffect(() => {
@@ -50,16 +49,22 @@ const Experience = () => {
         setTimeout(() => {
           item.classList.add('visible');
         }, delay);
-        delay += 1000; 
+        delay += 1000;
       });
     };
 
     const animateLine = () => {
       line.classList.add('animate');
-      setTimeout(revealItems, 2000); 
+      setTimeout(revealItems, 2000);
     };
 
-    window.addEventListener('load', animateLine);
+    if (document.readyState === 'complete') {
+      animateLine();
+    } else {
+      window.addEventListener('load', animateLine);
+    }
+
+    return () => window.removeEventListener('load', animateLine);
   }, []);
 
   return (

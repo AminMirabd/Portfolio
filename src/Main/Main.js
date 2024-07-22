@@ -1,5 +1,5 @@
 // src/Main/Main.js
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import { Element } from 'react-scroll';
 import emailjs from 'emailjs-com';
 import ProjectCard from '../ProjectCard';
@@ -13,35 +13,13 @@ import mine1 from './mine1.png';
 import mine2 from './mine2.png';
 import mono from './mono.png';
 import Experience from './Experience';
+import intro from './intro.png';
 import { FaHtml5, FaCss3Alt, FaJsSquare, FaReact, FaNodeJs, FaPython, FaJava, FaLinux, FaGithub, FaGit} from 'react-icons/fa';
 import { SiMongodb, SiMysql, SiGooglecloud, SiApachecordova, SiAndroidstudio, SiCsharp, SiFirebase, SiMicrosoftazure, SiMicrosoftsqlserver, SiMonogame, SiJquery, SiExpress  } from 'react-icons/si';
 
-
 function Main() {
   const [form, setForm] = useState({ from_name: '', email: '', message: '' });
-  const videoRef = useRef(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-
-    const playVideo = () => {
-      video.play();
-    };
-
-    const handleVideoEnd = () => {
-      video.style.display = '';
-    };
-
-    setTimeout(playVideo, 2500); //delay
-
-    video.addEventListener('ended', handleVideoEnd);
-
-    return () => {
-      video.removeEventListener('ended', handleVideoEnd);
-    };
-  }, []);
   
-
   const handleChange = (e) => {
     setForm({
       ...form,
@@ -63,14 +41,12 @@ function Main() {
 
     setForm({ from_name: '', email: '', message: '' }); 
   };
+
   return (
     <main>
       <div className="background"><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/><span/></div>
       <Element name="landing" className="element intro">
-        <video ref={videoRef} className="side-video" width="320" height="240" muted>
-          <source src={require('./animation.mp4')} type="video/mp4" />
-          Your browser does not support the video tag.
-        </video>
+        <img src={intro} className="side-video" alt="Intro Image" />
         <div className="content">
           <h2><span className="name">Amin</span> <span className="surname">Mirabdolvahabi</span></h2>
           <p>Conestoga College graduate, developer, and WCDSB employee and scholar. I am an engineering and programming enthusiast and enjoy learning new things. I strive to apply my knowledge to solve real-life problems!</p>
@@ -161,7 +137,7 @@ function Main() {
             name="to_name"
             value="Recipient Name" 
           />
-          <button class="btn" type="submit">Send</button>
+          <button className="btn" type="submit">Send</button>
         </form>
       </Element>
     </main>

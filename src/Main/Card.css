@@ -34,7 +34,6 @@ main {
 }
 
 footer {
-  z-index: 7;
   background: var(--primary-color);
   color: var(--text-color);
   text-align: center;
@@ -191,6 +190,15 @@ footer p {
   .side-image-right {
     right: 30px;
     transform: rotateY(45deg) translateZ(50px) translateX(120px);
+  }
+  .card-wrapper:hover .side-image-left {
+    opacity: 1;
+    transform: rotateY(-45deg) translateZ(50px) translateX(-60px);
+  }
+  
+  .card-wrapper:hover .side-image-right {
+    opacity: 1;
+    transform: rotateY(45deg) translateZ(50px) translateX(60px);
   }
 }
 

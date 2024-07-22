@@ -1,7 +1,7 @@
 import './Card.css';
 import React, { useRef } from "react";
 import { motion, useMotionTemplate, useMotionValue, useSpring } from "framer-motion";
-import '@fortawesome/fontawesome-free/css/all.min.css'; // Import FontAwesome CSS
+import '@fortawesome/fontawesome-free/css/all.min.css'; 
 
 const Modern3DCard = ({ title, description, leftImage, rightImage, mainImage, githubLink }) => {
   return (
@@ -32,18 +32,20 @@ const Card = ({ title, description, leftImage, rightImage, mainImage, githubLink
     const mouseX = (e.clientX - rect.left) - width / 2;
     const mouseY = (e.clientY - rect.top) - height / 2;
 
-    const rX = (mouseY / height) * -20; // Reduced intensity
-    const rY = (mouseX / width) * 20;   // Reduced intensity
+    const rX = (mouseY / height) * -20; 
+    const rY = (mouseX / width) * 20;   
 
     x.set(rX);
     y.set(rY);
 
-    // Show side images on hover
+  
     ref.current.querySelectorAll('.side-image').forEach(image => {
+
       image.style.opacity = '1';
       image.style.transform = image.classList.contains('side-image-left')
         ? 'rotateY(-15deg) translateZ(30px) translateX(-40px)'
         : 'rotateY(15deg) translateZ(30px) translateX(40px)';
+      image.style.visibility = 'visible';
     });
   };
 
@@ -51,17 +53,20 @@ const Card = ({ title, description, leftImage, rightImage, mainImage, githubLink
     x.set(0);
     y.set(0);
 
-    // Hide side images on mouse leave
+
     ref.current.querySelectorAll('.side-image').forEach(image => {
       image.style.opacity = '0';
       image.style.transform = image.classList.contains('side-image-left')
         ? 'rotateY(-15deg) translateZ(30px) translateX(-100px)'
         : 'rotateY(15deg) translateZ(30px) translateX(100px)';
+        setTimeout(() => {
+          image.style.visibility = 'hidden';
+        }, 200);
     });
   };
 
   const handleGithubClick = () => {
-    console.log("GitHub icon clicked"); // Debugging log
+    console.log("GitHub icon clicked");
     window.open(githubLink, '_blank', 'noopener,noreferrer');
   };
 
